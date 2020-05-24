@@ -20,9 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/index', 'indexController@index')->name('index');
-Route::post('/add','indexController@add')->name('add');
-Route::get('/result/ajax','indexController@getData');
+Route::get('/index', 'HomeController@about')->name('index');
+Route::post('/add','HomeController@add')->name('add');
+Route::get('/result/ajax','HomeController@getData');
 
 
 Route::get('/etube', 'EditController@index')->name('etube');
